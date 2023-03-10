@@ -7,10 +7,12 @@ from PIL import Image
 st.title("Dermoverse Skin Cancer Detector")
 
 #1Brief summary of what the application does
-st.subheader("This application can classify potential skin cancer images into two classes, whether they are benign or malignant")
+st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
 
 #1Information of what kind of images should be uploaded.
-st.subheader("The images uploaded should be a close up of the suspect skin anomoly ")
+st.subheader("In the upcoming versions phone-made pictures will be supported")
+
+st.subheader("Note that is just a beta. Consult with a professional for further information")
 
 # Load the pre-trained model
 model = tf.keras.models.load_model('dermodev.h5')
