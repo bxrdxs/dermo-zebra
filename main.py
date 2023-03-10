@@ -54,7 +54,7 @@ if run_model:
     # Add a button to download the prediction file
     download_button = st.download_button(
         label='Download prediction',
-        data= [predicted_class + " " + prediction],
+        data= f"Malignant: {percentages[0]:.2f}%\nBenign: {percentages[1]:.2f}%",
         file_name='prediction.txt',
         mime='text/plain'
     )
