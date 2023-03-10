@@ -10,9 +10,9 @@ st.title("Dermoverse Skin Cancer Detector")
 st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
 
 #1Information of what kind of images should be uploaded.
-st.subheader("In the upcoming versions phone-made pictures will be supported")
+st.subheader("In the upcoming versions phone-made pictures will be supported.")
 
-st.subheader("Note that is just a beta. Consult with a professional for further information")
+st.subheader("Note that is just a beta. Consult with a professional for further information.")
 
 # Load the pre-trained model
 model = tf.keras.models.load_model('dermodev.h5')
