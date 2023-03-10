@@ -2,7 +2,6 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-import datetime
 
 #1Application heading
 st.title("Dermoverse Skin Cancer Detector")
@@ -47,12 +46,10 @@ if run_model:
         class_label = class_labels[i]
         st.write(f"{class_label}: {percentage:.2f}%")
         
-    
-    # Save the prediction to a text file
-    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    data = f"Malignant: {percentages[0]:.2f}%\nBenign: {percentages[1]:.2f}%\nTime: {current_time}"
+ # Save the prediction to a text file
+    predicted_class = class_labels[prediction.argmax()]
     with open('prediction.txt', 'w') as f:
-        f.write(data)
+        f.write(predicted_class)
     
     # Add a button to download the prediction file
     download_button = st.download_button(
@@ -60,5 +57,4 @@ if run_model:
         file_name='prediction.txt',
         mime='text/plain'
     )
-
 
