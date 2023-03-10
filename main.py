@@ -15,9 +15,9 @@ st.subheader("This BETA can classify potential skin cancer images into two class
 username = st.text_input("Enter your username:")
 
 #1Information of what kind of images should be uploaded.
-st.subheader("In the upcoming versions phone-made pictures will be supported.")
+st.markdown("In the upcoming versions phone-made pictures will be supported.")
 
-st.subheader("Note that is just a beta. Consult with a professional for further information.")
+st.markdown("Note that is just a beta. Consult with a professional for further information.")
 
 # Load the pre-trained model
 model = tf.keras.models.load_model('dermodev.h5')
