@@ -6,6 +6,8 @@ from PIL import Image
 #1Application heading
 st.title("Dermoverse Skin Cancer Detector")
 
+st.markdown('Visit us in: **dermoverse.org**.')
+
 #1Brief summary of what the application does
 st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
     
@@ -43,5 +45,19 @@ if run_model:
     for i, percentage in enumerate(percentages):
         class_label = class_labels[i]
         st.write(f"{class_label}: {percentage:.2f}%")
+        
+        
+       # Save the prediction to a text file
+    predicted_class = class_labels[prediction.argmax()]
+    with open('prediction.txt', 'w') as f:
+        f.write(predicted_class)
+    
+    # Add a button to download the prediction file
+    download_button = st.download_button(
+        label='Download prediction',
+        data='prediction.txt',
+        file_name='prediction.txt',
+        mime='text/plain'
+    )
 
 
