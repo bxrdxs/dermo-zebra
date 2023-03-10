@@ -9,6 +9,16 @@ st.title("Dermoverse Skin Cancer Detector")
 #1Brief summary of what the application does
 st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
 
+# Define the URL you want to open when the button is clicked
+url = 'https://dermoverse.org'
+
+# Add a button to your Streamlit app
+if st.button('Open website'):
+    # When the button is clicked, open the URL in a new browser tab
+    js = f"window.open('{url}')"  # JavaScript code to open a new tab
+    html = '<img src onerror="{}">'.format(js)  # Create an invisible image that triggers the JS code
+    st.write(html, unsafe_allow_html=True)  # Render the image
+    
 #1Information of what kind of images should be uploaded.
 st.subheader("In the upcoming versions phone-made pictures will be supported.")
 
