@@ -11,6 +11,9 @@ st.markdown('Visit us in: **dermoverse.org**.')
 #1Brief summary of what the application does
 st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
     
+# Ask for the username
+username = st.text_input("Enter your username:")
+
 #1Information of what kind of images should be uploaded.
 st.subheader("In the upcoming versions phone-made pictures will be supported.")
 
@@ -54,7 +57,7 @@ if run_model:
     # Add a button to download the prediction file
     download_button = st.download_button(
         label='Download prediction',
-        data= f"Malignant: {percentages[0]:.2f}%\nBenign: {percentages[1]:.2f}%",
+        data = f"Username: {username}\nMalignant: {percentages[0]:.2f}%\nBenign: {percentages[1]:.2f}%",
         file_name='prediction.txt',
         mime='text/plain'
     )
