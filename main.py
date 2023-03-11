@@ -2,7 +2,6 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
 
 #1Application heading
 st.title("Dermoverse Skin Cancer Detector")
@@ -59,16 +58,6 @@ if run_model:
         class_label = class_labels[i]
         st.write(f"{class_label}: {percentage:.2f}%")
         
-  # Add a graph of linear regression showing the value visually of the melanoma prediction
-    x = [0, 1]
-    y = percentages
-    fig, ax = plt.subplots()
-    ax.bar(x, y, width=0.4)
-    ax.set_xticks(x)
-    ax.set_xticklabels(class_labels)
-    ax.set_ylabel("Percentage")
-    ax.set_title("Melanoma Prediction")
-    st.pyplot(fig)
         
  # Save the prediction to a text file
     predicted_class = class_labels[prediction.argmax()]
