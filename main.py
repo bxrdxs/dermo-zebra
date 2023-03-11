@@ -57,7 +57,7 @@ if run_model:
     # Add a button to download the prediction file
     download_button = st.download_button(
         label='Download prediction',
-        data = f"Username: {username}\nMalignant: {percentages[0]:.2f}%\nBenign: {percentages[1]:.2f}%",
+        data = f"Dermoverse Melanoma Detector\n   \n Username: {username}\nMalignant: {percentages[0]:.2f}%\nBenign: {percentages[1]:.2f}%\n  \n Copyright ©2023",
         file_name='prediction.txt',
         mime='text/plain'
     )
