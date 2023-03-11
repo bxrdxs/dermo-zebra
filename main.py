@@ -39,7 +39,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=ALLOWED_EXTENSIONS)
 
 # Define the "Run Model" button
 if uploaded_file is not None:
-    run_model = st.button("Run Model")
+    run_model = st.button("Predict")
 else:
     run_model = False
 
