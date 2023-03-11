@@ -39,7 +39,6 @@ uploaded_file = st.file_uploader("Choose an image...", type=ALLOWED_EXTENSIONS)
 
 # Define the "Run Model" button
 if uploaded_file is not None:
-    st.image(image, output_format = "auto" )
     run_model = st.button("Run Model")
 else:
     run_model = False
