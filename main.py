@@ -15,7 +15,7 @@ st.markdown(text, unsafe_allow_html=True)
 #st.markdown('Visit us in: **dermoverse.org**.')
 
 #1Brief summary of what the application does
-st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
+st.subheader("This BETA (BrUNO-1) can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
     
 # Ask for the username
 username = st.text_input("Enter your nickname:")
