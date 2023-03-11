@@ -26,7 +26,7 @@ model = tf.keras.models.load_model('dermodev.h5')
 class_labels = ['Malignant', 'Benign']
 
 # Set allowed file types
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+ALLOWED_EXTENSIONS = {'jpg', 'jpeg'}
 
 # Define the Streamlit app
 uploaded_file = st.file_uploader("Choose an image...", type=ALLOWED_EXTENSIONS)
