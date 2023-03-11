@@ -6,7 +6,13 @@ from PIL import Image
 #1Application heading
 st.title("Dermoverse Skin Cancer Detector")
 
-st.markdown('Visit us in: **dermoverse.org**.')
+url_link = "https:/www.dermoverse.org"
+url_text = '**dermoverse.org**'
+
+markdown_text = f"[{url_text}]({url_link})"
+st.markdown('Visit us in: ', markdown_text, unsafe_allow_html=True)
+
+#st.markdown('Visit us in: **dermoverse.org**.')
 
 #1Brief summary of what the application does
 st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
