@@ -12,7 +12,7 @@ st.markdown('Visit us in: **dermoverse.org**.')
 st.subheader("This BETA can classify potential skin cancer images into two classes, whether they are benign or malignant. The images uploaded should be clinically made. ")
     
 # Ask for the username
-username = st.text_input("Enter your username:")
+username = st.text_input("Enter your nickname:")
 
 #1Information of what kind of images should be uploaded.
 st.markdown("In the upcoming versions phone-made pictures will be supported.")
@@ -25,8 +25,11 @@ model = tf.keras.models.load_model('dermodev.h5')
 # Define the class labels
 class_labels = ['Malignant', 'Benign']
 
+# Set allowed file types
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+
 # Define the Streamlit app
-uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+uploaded_file = st.file_uploader("Choose an image...", type=ALLOWED_EXTENSIONS)
 
 # Define the "Run Model" button
 if uploaded_file is not None:
