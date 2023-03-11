@@ -6,11 +6,11 @@ from PIL import Image
 #1Application heading
 st.title("Dermoverse Skin Cancer Detector")
 
-url_link = "https:/www.dermoverse.org"
-url_text = '**dermoverse.org**'
+url_link = "http://www.dermoverse.org"
+url_text = "Dermoverse.org"
+text = f"Visit us in [{url_text}]({url_link})."
 
-markdown_text = f"[{url_text}]({url_link})"
-st.markdown('Visit us in: ', markdown_text, unsafe_allow_html=True)
+st.markdown(text, unsafe_allow_html=True)
 
 #st.markdown('Visit us in: **dermoverse.org**.')
 
